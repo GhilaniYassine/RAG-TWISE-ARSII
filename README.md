@@ -48,8 +48,23 @@ Follow these instructions to set up and run the Document Buddy App on your local
 ```bash
 git clone https://github.com/AIAnytime/Document-Buddy-App.git
 cd Document-Buddy-App
+```
 
-2. Create a Virtual Environment
+### 2. Install and Run Required Services
+
+#### Install and Run Ollama
+1. Install Ollama by following instructions at https://ollama.ai/
+2. Pull and run the Llama model:
+```bash
+ollama pull llama3.2:3b
+
+```
+Run Qdrant Vector Database
+Install and run Qdrant using Docker:
+sudo docker run -p 6333:6333 -v .:/qdrant/storage qdrant/qdrant 
+
+
+### 3. Create a Virtual Environment
 
 You can either use Python’s venv or Anaconda to create a virtual environment for managing dependencies.
 
@@ -82,13 +97,13 @@ conda activate document_buddy
 
 
 
-3. Install Dependencies
+### 4. Install Dependencies
 
 Once the environment is set up (whether venv or Conda), install the required dependencies using requirements.txt:
 
 pip install -r requirements.txt
 
-4. Run the App
+### 5. Run the App
 
 Start the Streamlit app using the following command:
 
@@ -97,37 +112,10 @@ streamlit run new.py
 Note: If your main application file is named differently, replace new.py with your actual file name (e.g., app.py).
 
 This command will launch the app in your default web browser. If it doesn’t open automatically, navigate to the URL provided in the terminal (usually http://localhost:8501).
-```
-
-### 🤝 Contributing
-
-Contributions are welcome! Whether it’s reporting a bug, suggesting a feature, or submitting a pull request, your input is highly appreciated. Follow these steps to contribute:
-
-1.	Fork the Repository: Click on the “Fork” button at the top-right corner of the repository page.
-2.	Clone Your Fork
-3.	Create a New Branch:
-
-```
-git checkout -b feature/YourFeatureName
-```
 
 
-4.	Make Your Changes: Implement your feature or fix.
-5.	Commit Your Changes:
-
-```
-git commit -m "Add Your Feature Description"
-```
 
 
-6.	Push to Your Fork:
-
-```
-git push origin feature/YourFeatureName
-```
-
-
-7.	Create a Pull Request: Navigate to the original repository and create a pull request from your fork.
 
 ### 📄 License
 
@@ -135,11 +123,11 @@ This project is licensed under the MIT License.
 
 ### 📫 Contact
 
-•	Email: aianytime07@gmail.com ✉️
+•	Email: ghilaniyassine11@gmail.com ✉️
 
 Feel free to reach out for any queries, suggestions, or contributions. Your feedback is invaluable!
 
-© 2024 Document Buddy App by AI Anytime. All rights reserved. 🛡️
+
 
 ### 🔗 Useful Links
 
